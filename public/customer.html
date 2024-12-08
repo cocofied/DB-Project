@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Customer Page</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <a href="homepage.html" id="homepage-btn" class="home-btn">Homepage</a>
+            <button id="go-to-review-btn" class="choice-button">Go to Reviews</button>
+            <h1 class="title">Book a Catering Service</h1>
+        
+            <div id="booking-form">
+                <h2>Fill in your booking details</h2>
+                <form id="booking-form-details">
+                    <label for="company-name">Catering Services:</label>
+                    <select id="company-name" name="company-name" required>
+                        <option value="" disabled selected>Select a Catering Company</option>
+                    </select>
+                    
+                    <label for="service-description">Description:</label>
+                    <textarea id="service-description" name="service-description" placeholder="Enter a description of the service" required></textarea>
+
+                    <button type="button" id="get-price-btn" class="choice-button">Get Price</button>
+
+                    <div id="price-section" style="display: none;">
+                        <label for="price">Price:</label>
+                        <span id="price"></span>
+                        
+                        <label for="payment-method">Payment Method:</label>
+                        <select id="payment-method" name="payment-method" required>
+                            <option value="" disabled selected>Select a Payment Method</option>
+                            <option value="CreditCard">Credit Card</option>
+                            <option value="DebitCard">Debit Card</option>
+                            <option value="PayPal">PayPal</option>
+                            <option value="Cash">Cash</option>
+                        </select>
+
+                        <button type="button" id="pay-btn" class="choice-button" style="display: none;">Pay</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <script src="script.js"></script>
+    </body>
+</html>
