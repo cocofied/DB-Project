@@ -35,6 +35,8 @@ db.query("SELECT 1", (err) => {
     }
 });
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 // Server Homepage
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "public", "homepage.html"));
