@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Page</title>
+    <style>
+        /* Add your CSS here */
+    </style>
+</head>
+<body>
+    <a href="homepage.html" id="homepage-btn" class="home-btn">Homepage</a>
+    <button id="go-to-customer-btn" class="choice-button">Go to Booking</button>
+    <h1>Leave a Review</h1>
+
+    <!-- Dropdown to select a service -->
+    <select id="service-dropdown">
+        <option value="" disabled selected>Select a service</option>
+    </select>
+
+    <!-- Service details -->
+    <div id="service-details">
+        <p><strong>Service Name:</strong> <span id="service-name"></span></p>
+        <p><strong>Description:</strong> <span id="service-description"></span></p>
+        <p><strong>Price:</strong> $<span id="service-price"></span></p>
+    </div>
+
+    <!-- Review form -->
+    <div id="review-form">
+        <label for="rating">Rating (1-5):</label>
+        <input type="number" id="rating" min="1" max="5" required>
+        
+        <label for="review-description">Review:</label>
+        <textarea id="review-description" required></textarea>
+        
+        <button id="submit-review-btn">Submit Review</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
