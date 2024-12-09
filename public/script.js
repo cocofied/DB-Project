@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const customerBtn = document.getElementById("customer-btn");
     if (customerBtn) {
         customerBtn.addEventListener("click", function() {
-            window.location.href = "https://db-project-zoyc.onrender.com/customer_sign_in.html";
+            window.location.href = "https://db-project-zoyc.onrender.com/customer_sign_In.html";
         });
     }
     //****************************************************************************/
