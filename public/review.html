@@ -14,8 +14,10 @@
     <h1>Leave a Review</h1>
 
     <!-- Dropdown to select a service -->
-    <select id="service-dropdown">
+    <label for="service-dropdown">Select a service:</label>
+    <select id="service-dropdown" name="service-dropdown" required>
         <option value="" disabled selected>Select a service</option>
+    <!-- You can dynamically populate the options here -->
     </select>
 
     <!-- Service details -->

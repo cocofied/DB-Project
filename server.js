@@ -17,6 +17,10 @@ app.use(express.static(path.join(__dirname, "public"))); // Serve static files
 app.use(cors({
     origin: "http://127.0.0.1:8080", // Explicitly allow your frontend
 }));
+app.use((req, res, next) => {
+    res.setHeader('X-Content-Type-Options', 'nosniff');
+    next();
+});
 
 // Database connection
 const db = mysql.createPool({

@@ -42,7 +42,7 @@ async function signIn(event) {
             const responseData = await response.json();
             // Store user data in localStorage
             localStorage.setItem("user", JSON.stringify(responseData.user));
-            window.location.href = "customer.html";
+            window.location.href = "https://db-project-zoyc.onrender.com/customer.html";
         } else {
             const errorData = await response.json();
             alert(`Error: ${errorData.error || "Failed to sign in."}`);
