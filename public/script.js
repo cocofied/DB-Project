@@ -6,14 +6,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const companyBtn = document.getElementById("company-btn");
     if (companyBtn) {
         companyBtn.addEventListener("click", function() {
-            window.location.href = "company.html";
+            window.location.href = "https://db-project-zoyc.onrender.com/company.html";
         });
     }
     //*************************************************************************************/
     const customerBtn = document.getElementById("customer-btn");
     if (customerBtn) {
         customerBtn.addEventListener("click", function() {
-            window.location.href = "customer_sign_in.html";
+            window.location.href = "https://db-project-zoyc.onrender.com/customer_sign_in.html";
         });
     }
     //****************************************************************************/
@@ -29,7 +29,7 @@ async function signIn(event) {
 
     try {
         // POST request to backend
-        const response = await fetch("http://localhost:3000/sign-in", {
+        const response = await fetch("https://db-project-zoyc.onrender.com/sign-in", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -83,7 +83,7 @@ async function signUp(event) {
 
     try {
         // POST request to backend
-        const response = await fetch("http://localhost:3000/sign-up", {
+        const response = await fetch("https://db-project-zoyc.onrender.com/sign-up", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -94,7 +94,7 @@ async function signUp(event) {
         if (response.ok) {
             const responseData = await response.json();
             alert("Account created successfully!");
-            window.location.href = "customer_sign_in.html"; // Redirect to sign-in page
+            window.location.href = "https://db-project-zoyc.onrender.com/customer_sign_in.html"; // Redirect to sign-in page
         } else {
             const errorData = await response.json();
             alert(`Error: ${errorData.error || "Failed to create account."}`);
@@ -129,7 +129,7 @@ async function recoverPassword(event) {
 
     try {
         // POST request to the backend recover-password route
-        const response = await fetch("/recover-password", {
+        const response = await fetch("https://db-project-zoyc.onrender.com/recover-password", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -162,14 +162,14 @@ if (recoverBtn) {
     const signupBtn = document.getElementById("signup-btn");
     if (signupBtn) {
         signupBtn.addEventListener("click", function() {
-            window.location.href = "customer_sign_up.html";
+            window.location.href = "https://db-project-zoyc.onrender.com/customer_sign_up.html";
         });
     }
     //*************************************************************************************/
     const forgotpassBtn = document.getElementById("forgot-pass-btn");
     if (forgotpassBtn) {
         forgotpassBtn.addEventListener("click", function() {
-            window.location.href = "recover_password.html";
+            window.location.href = "https://db-project-zoyc.onrender.com/recover_password.html";
         });
     }
     //***************************************************************************************/
@@ -193,12 +193,12 @@ if (recoverBtn) {
     if (homepageBtn) {
         homepageBtn.addEventListener("click", function () {
             localStorage.removeItem("user");
-            window.location.href = "homepage.html";
+            window.location.href = "https://db-project-zoyc.onrender.com/homepage.html";
         });
     }
     //*********************************************************************************************/
   // Customer page-specific functionality
-    if (currentPage === "customer.html") {
+    if (currentPage === "https://db-project-zoyc.onrender.com/customer.html") {
 
         const userData = JSON.parse(localStorage.getItem("user"));
         const UserID = userData ? userData.id : null;
@@ -206,7 +206,7 @@ if (recoverBtn) {
         // Fetch and display catering companies
         async function getCateringCompanies() {
             try {
-                const response = await fetch("http://localhost:3000/companies");
+                const response = await fetch("https://db-project-zoyc.onrender.com/companies");
                 if (response.ok) {
                     const companies = await response.json();
                     const companySelect = document.getElementById("company-name");
@@ -243,7 +243,7 @@ if (recoverBtn) {
         
             try {
                 // Fetch the price using the selected ServiceID
-                const response = await fetch(`http://localhost:3000/api/services/${selectedCompanyId}`);
+                const response = await fetch(`https://db-project-zoyc.onrender.com/${selectedCompanyId}`);
                 if (response.ok) {
                     const data = await response.json();
                     document.getElementById("price").textContent = `$${data.price}`;
@@ -294,7 +294,7 @@ if (recoverBtn) {
 
             try {
                 console.log("Booking Data:", bookingData);
-                const response = await fetch("http://localhost:3000/addBooking", {
+                const response = await fetch("https://db-project-zoyc.onrender.com/addBooking", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(bookingData),
@@ -337,12 +337,12 @@ if (recoverBtn) {
     const gotoReviewBtn = document.getElementById("go-to-review-btn");
     if (gotoReviewBtn) {
         gotoReviewBtn.addEventListener("click", function() {
-            window.location.href = "review.html";
+            window.location.href = "https://db-project-zoyc.onrender.com/review.html";
         });
     }
     //******************************************************************************************/
     // Review page-specific functionality
-    if (currentPage === "review.html") {
+    if (currentPage === "https://db-project-zoyc.onrender.com/review.html") {
 
         const user = JSON.parse(localStorage.getItem("user"));
         const UserID = user ? user.UserID : null;
@@ -427,7 +427,7 @@ document.getElementById("submit-review-btn").addEventListener("click", () => {
     const gotoBookingBtn = document.getElementById("go-to-customer-btn");
     if (gotoBookingBtn) {
         gotoBookingBtn.addEventListener("click", function() {
-            window.location.href = "customer.html";
+            window.location.href = "https://db-project-zoyc.onrender.com/customer.html";
         });
     }
     //********************************************************************************************/
@@ -445,7 +445,7 @@ document.getElementById("submit-review-btn").addEventListener("click", () => {
         };
 
         try {
-            const response = await fetch("http://localhost:3000/add_companies", {
+            const response = await fetch("https://db-project-zoyc.onrender.com/add_companies", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -480,7 +480,7 @@ document.getElementById("submit-review-btn").addEventListener("click", () => {
         };
     
         try {
-            const response = await fetch("http://localhost:3000/delete_companies", {
+            const response = await fetch("https://db-project-zoyc.onrender.com/delete_companies", {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json",
