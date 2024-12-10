@@ -61,4 +61,4 @@ Deployment
 •	Backend: Hosted on Render.
 •	Database: AWS RDS MySQL.
 •	Frontend: Deployed alongside the backend on Render.
-### # AWSDBUPDATE ### holds the file download from AWS for the DB we are using, it is just so Dr.Z can view it if necessary
+### # AWSDBUPDATE ### holds the file download from AWS. 
