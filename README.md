@@ -42,12 +42,12 @@ The database is hosted on AWS RDS, and the application is deployed on Render.
 2.	Install Dependencies:
 npm install
 3.	Set Up Environment Variables: Create a .env file in the root directory with the following:
-DB_HOST=catering-project-db.ctq4sq260acq.us-east-2.rds.amazonaws.com
-DB_USER=admin
-DB_PASSWORD=Texas1482
-DB_NAME=catering_service
-DB_Port=3306
-PORT=3000
+##DB_HOST=catering-project-db.ctq4sq260acq.us-east-2.rds.amazonaws.com
+##DB_USER=admin
+##DB_PASSWORD=Texas1482
+##DB_NAME=catering_service
+##DB_Port=3306
+##PORT=3000
 This can also be used to access the AWS DB directly using MySQL Workbench. Inbound traffic is set to accept all for a limited time
 5.	Run the Server:
 nodemon server.js 
