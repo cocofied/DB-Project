@@ -52,7 +52,7 @@ This can also be used to access the AWS DB directly using MySQL Workbench. Inbou
 5.	Run the Server:
 nodemon server.js 
 node server.js
-6.	Access the Application: Open http://localhost:3000 in your browser.
+6.	Access the Application: Open http://localhost:3000 in your browser or navigate to website https://db-project-zoyc.onrender.com/
 Usage
 •	Navigate to homepage.html to choose customer or company functionalities.
 •	Use customer.html for booking and reviewing services.
