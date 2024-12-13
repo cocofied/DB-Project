@@ -94,7 +94,7 @@ async function signUp(event) {
         if (response.ok) {
             const responseData = await response.json();
             alert("Account created successfully!");
-            window.location.href = "https://db-project-zoyc.onrender.com/customer_sign_in.html"; // Redirect to sign-in page
+            window.location.href = "https://db-project-zoyc.onrender.com/customer_sign_In.html"; // Redirect to sign-in page
         } else {
             const errorData = await response.json();
             alert(`Error: ${errorData.error || "Failed to create account."}`);
@@ -198,7 +198,7 @@ if (recoverBtn) {
     }
     //*********************************************************************************************/
   // Customer page-specific functionality
-    if (currentPage === "https://db-project-zoyc.onrender.com/customer.html") {
+    if (currentPage === "customer.html") {
 
         const userData = JSON.parse(localStorage.getItem("user"));
         const UserID = userData ? userData.id : null;
@@ -342,7 +342,7 @@ if (recoverBtn) {
     }
     //******************************************************************************************/
     // Review page-specific functionality
-    if (currentPage === "https://db-project-zoyc.onrender.com/review.html") {
+    if (currentPage === "review.html") {
 
         const user = JSON.parse(localStorage.getItem("user"));
         const UserID = user ? user.UserID : null;
