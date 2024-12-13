@@ -25,6 +25,15 @@ Catering companies can:
 
 The database is hosted on AWS RDS, and the application is deployed on Render.
 
+## Database Instructions
+- launch the MySQL Workbench application.
+- click the + to create new connection
+- hostname: catering-project-db.ctq4sq260acq.us-east-2.rds.amazonaws.com
+- databasename: catering_service
+- databasepassword: Texas1482
+- databaseport: 3306
+- user: admin
+
 ## Features
 - User authentication with JWT.
 - CRUD operations for bookings and reviews.
