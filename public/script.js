@@ -243,7 +243,7 @@ if (recoverBtn) {
         
             try {
                 // Fetch the price using the selected ServiceID
-                const response = await fetch(`https://db-project-zoyc.onrender.com/${selectedCompanyId}`);
+                const response = await fetch(`https://db-project-zoyc.onrender.com/api/services/${selectedCompanyId}`);
                 if (response.ok) {
                     const data = await response.json();
                     document.getElementById("price").textContent = `$${data.price}`;
